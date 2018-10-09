@@ -3,7 +3,8 @@
 <article>
 	<?php
 		$handle = file('./donnees.csv');
-		$output = explode(';', $handle[count($handle)-1], 5);
+		$lline = $handle[count($handle)-1];
+		$output = explode(';', $lline, 5);
 		foreach($output as $value) { echo("$value<br />"); }
 	?>
 </article>
